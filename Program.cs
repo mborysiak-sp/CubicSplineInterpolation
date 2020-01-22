@@ -19,7 +19,8 @@ namespace CublicSplineInterpolation
 		static void Main(string[] args)
 		{
 			CubicSplineInterpolation cubicSplineInterpolation = new CubicSplineInterpolation(samplePoints);
-			cubicSplineInterpolation.SetMFromGaussElimination();
+			cubicSplineInterpolation.SetMVectorFromGaussSeidel();
+			cubicSplineInterpolation.Print(100);
 		}
 	}
 }

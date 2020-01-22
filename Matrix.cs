@@ -127,6 +127,16 @@ namespace CublicSplineInterpolation
 			return result;
 		}
 
+		public double GetNorm()
+		{
+			double sum = 0;
+			for (int i = 0; i < Rows; i++)
+			{
+				sum += Math.Pow(Fields[i, 0], 2);
+			}
+			return Math.Sqrt(sum);
+		}
+
 		public static Matrix operator +(Matrix matrix) => matrix;
 
 		public static Matrix operator -(Matrix matrix)
